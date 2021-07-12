@@ -7,6 +7,7 @@ defmodule UranusWeb.Router do
 
   scope "/api", UranusWeb do
     pipe_through :api
+    get "/currency/:pair", CurrencyController, :show
   end
 
   # Enables LiveDashboard only for development
