@@ -10,6 +10,9 @@ use Mix.Config
 config :uranus,
   ecto_repos: [Uranus.Repo]
 
+config :uranus, :coin_cache,
+  module: Uranus.Cache.Redis
+
 # Configures the endpoint
 config :uranus, UranusWeb.Endpoint,
   url: [host: "localhost"],

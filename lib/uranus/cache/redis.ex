@@ -7,6 +7,7 @@ defmodule Uranus.Cache.Redis do
     |> elem(1)
   end
 
+  @impl Uranus.Cache
   def set_value(key, value, opt \\ []) do
     expiry = Keyword.get(opt, :expiry)
 
