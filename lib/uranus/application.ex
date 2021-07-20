@@ -14,9 +14,10 @@ defmodule Uranus.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Uranus.PubSub},
       # Start the Endpoint (http/https)
-      UranusWeb.Endpoint
+      UranusWeb.Endpoint,
       # Start a worker by calling: Uranus.Worker.start_link(arg)
       # {Uranus.Worker, arg}
+      {Redix, host: "localhost", name: :redix}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
