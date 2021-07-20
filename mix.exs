@@ -44,7 +44,8 @@ defmodule Uranus.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:httpoison, "~> 1.8"},
-      {:redix, "~> 1.1.3"}
+      {:redix, "~> 1.1.3"},
+      {:cors_plug, "~> 2.0"}
     ]
   end
 

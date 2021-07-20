@@ -9,7 +9,9 @@ defmodule UranusWeb.CurrencyController do
     [symbol, convert] = String.split(pair, "-")
     price = latest_price(symbol, convert)
 
-    render(conn, "show.json", %{price: price})
+    conn
+    |> put_resp_header("cache-control", "max-age=10")
+    |> render("show.json", %{price: price})
   end
 
   defp latest_price(symbol, convert) do
