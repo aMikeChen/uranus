@@ -17,7 +17,8 @@ defmodule Uranus.Application do
       UranusWeb.Endpoint,
       # Start a worker by calling: Uranus.Worker.start_link(arg)
       # {Uranus.Worker, arg}
-      {Redix, host: "localhost", name: :redix}
+      {Redix, host: "localhost", name: :redix},
+      {Cachex, name: :my_cachex}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

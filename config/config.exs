@@ -10,8 +10,7 @@ use Mix.Config
 config :uranus,
   ecto_repos: [Uranus.Repo]
 
-config :uranus, :coin_cache,
-  module: Uranus.Cache.Redis
+config :uranus, :coin_cache, module: Uranus.Cache.Cachex
 
 # Configures the endpoint
 config :uranus, UranusWeb.Endpoint,

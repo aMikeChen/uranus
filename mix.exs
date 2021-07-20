@@ -45,7 +45,8 @@ defmodule Uranus.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:httpoison, "~> 1.8"},
       {:redix, "~> 1.1.3"},
-      {:cors_plug, "~> 2.0"}
+      {:cors_plug, "~> 2.0"},
+      {:cachex, "~> 3.4.0"}
     ]
   end
 
